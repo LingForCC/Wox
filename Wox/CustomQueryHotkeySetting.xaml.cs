@@ -77,7 +77,7 @@ namespace Wox
             }
 
             UserSettingStorage.Instance.Save();
-            settingWidow.ReloadCustomPluginHotkeyView();
+            //settingWidow.ReloadCustomPluginHotkeyView();
             Close();
         }
 

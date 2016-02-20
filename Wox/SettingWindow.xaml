@@ -11,7 +11,7 @@
 		Title="{DynamicResource woxsettings}"
 		ResizeMode="NoResize"
 		WindowStartupLocation="CenterScreen"
-		Height="600" Width="800" PreviewKeyDown="Window_PreviewKeyDown">
+		Height="600" Width="800" >
     <Window.Resources>
         <ListBoxItem HorizontalContentAlignment="Stretch"
 					IsEnabled="False"
@@ -20,7 +20,7 @@
         </ListBoxItem>
         <converters:ImagePathConverter x:Key="ImageConverter" />
     </Window.Resources>
-    <TabControl Height="auto" x:Name="settingTab" SelectionChanged="settingTab_SelectionChanged">
+    <TabControl Height="auto" x:Name="settingTab" >
         <!--<TabItem Header="{DynamicResource general}">
             <StackPanel Orientation="Vertical" Margin="10">
                 <CheckBox x:Name="cbStartWithWindows"  Unchecked="CbStartWithWindows_OnUnchecked" Checked="CbStartWithWindows_OnChecked" Margin="10">

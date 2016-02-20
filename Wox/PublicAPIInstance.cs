@@ -122,7 +122,7 @@ namespace Wox
             Application.Current.Dispatcher.Invoke(() =>
             {
                 SettingWindow sw = SingletonWindowOpener.Open<SettingWindow>(this);
-                sw.SwitchTo(tabName);
+                //sw.SwitchTo(tabName);
             });
         }
 
