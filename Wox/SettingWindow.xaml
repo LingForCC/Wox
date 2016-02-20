@@ -21,7 +21,7 @@
         <converters:ImagePathConverter x:Key="ImageConverter" />
     </Window.Resources>
     <TabControl Height="auto" x:Name="settingTab" SelectionChanged="settingTab_SelectionChanged">
-        <TabItem Header="{DynamicResource general}">
+        <!--<TabItem Header="{DynamicResource general}">
             <StackPanel Orientation="Vertical" Margin="10">
                 <CheckBox x:Name="cbStartWithWindows"  Unchecked="CbStartWithWindows_OnUnchecked" Checked="CbStartWithWindows_OnChecked" Margin="10">
                     <TextBlock Text="{DynamicResource startWoxOnSystemStartup}" ></TextBlock>
@@ -314,6 +314,6 @@
 
                 <TextBlock x:Name="tbActivatedTimes" Grid.Row="2" Margin="6" Grid.ColumnSpan="2" Text="{DynamicResource about_activate_times}"></TextBlock>
             </Grid>
-        </TabItem>
+        </TabItem>-->
     </TabControl>
 </Window>
