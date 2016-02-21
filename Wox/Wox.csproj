@@ -131,10 +131,12 @@
     <Compile Include="Storage\QueryHistoryStorage.cs" />
     <Compile Include="Storage\TopMostRecordStorage.cs" />
     <Compile Include="Storage\UserSelectedRecordStorage.cs" />
+    <Compile Include="ViewModel\BaseSettingTabItemViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ResultItemViewModel.cs" />
     <Compile Include="ViewModel\ResultPanelViewModel.cs" />
+    <Compile Include="ViewModel\SettingViewModel.cs" />
     <Compile Include="WoxUpdate.xaml.cs">
       <DependentUpon>WoxUpdate.xaml</DependentUpon>
     </Compile>
