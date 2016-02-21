@@ -1,26 +1,40 @@
 ﻿<Window
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:Wox.ViewModel"
+        xmlns:view="clr-namespace:Wox.View"
 		xmlns:wox="clr-namespace:Wox"
-    x:Class="Wox.SettingWindow"
+        x:Class="Wox.SettingWindow"
 		xmlns:woxPlugin="clr-namespace:Wox.Plugin;assembly=Wox.Plugin"
 		xmlns:converters="clr-namespace:Wox.Converters"
 		xmlns:userSettings="clr-namespace:Wox.Core.UserSettings;assembly=Wox.Core"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-		Icon="Images\app.png"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    Icon="Images\app.png"
 		Title="{DynamicResource woxsettings}"
 		ResizeMode="NoResize"
 		WindowStartupLocation="CenterScreen"
-		Height="600" Width="800" >
+		Height="600" Width="800" d:DataContext="{d:DesignInstance vm:SettingViewModel, IsDesignTimeCreatable=True}">
     <Window.Resources>
         <ListBoxItem HorizontalContentAlignment="Stretch"
 					IsEnabled="False"
 					IsHitTestVisible="False" x:Key="FeatureBoxSeperator">
             <Separator Width="{Binding ElementName=lbPlugins, Path=ActualWidth}"/>
-        </ListBoxItem>
+        </ListBoxItem> 
         <converters:ImagePathConverter x:Key="ImageConverter" />
+        <DataTemplate DataType="{x:Type vm:GeneralSettingViewModel}">
+            <view:GeneralSettingView></view:GeneralSettingView>
+        </DataTemplate>
     </Window.Resources>
-    <TabControl Height="auto" x:Name="settingTab" >
+    <TabControl Height="auto" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTabItemViewModel}">
+        <TabControl.ItemContainerStyle>
+            <Style TargetType="TabItem">
+                <Setter Property="Header" Value="{Binding Header}"/>
+                <Setter Property="Content" Value="{Binding Content}"/>
+            </Style>
+        </TabControl.ItemContainerStyle>
+
         <!--<TabItem Header="{DynamicResource general}">
             <StackPanel Orientation="Vertical" Margin="10">
                 <CheckBox x:Name="cbStartWithWindows"  Unchecked="CbStartWithWindows_OnUnchecked" Checked="CbStartWithWindows_OnChecked" Margin="10">

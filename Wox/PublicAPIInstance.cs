@@ -122,7 +122,19 @@ namespace Wox
             Application.Current.Dispatcher.Invoke(() =>
             {
                 SettingWindow sw = SingletonWindowOpener.Open<SettingWindow>(this);
-                //sw.SwitchTo(tabName);
+
+                SettingViewModel vm = null;
+                if (sw.DataContext == null)
+                {
+                    vm = new SettingViewModel();
+                    sw.DataContext = vm;
+                }
+                else
+                {
+                    vm = sw.DataContext as SettingViewModel;
+                }
+
+                vm.SwitchTo(tabName);
             });
         }
 
