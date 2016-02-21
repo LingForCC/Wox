@@ -133,10 +133,14 @@
     <Compile Include="Storage\UserSelectedRecordStorage.cs" />
     <Compile Include="ViewModel\BaseSettingTabItemViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\GeneralTabItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ResultItemViewModel.cs" />
     <Compile Include="ViewModel\ResultPanelViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
+    <Compile Include="View\GeneralSettingView.xaml.cs">
+      <DependentUpon>GeneralSettingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WoxUpdate.xaml.cs">
       <DependentUpon>WoxUpdate.xaml</DependentUpon>
     </Compile>
@@ -294,6 +298,10 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="View\GeneralSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WoxUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -377,6 +385,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y  $(ProjectDir)Themes\* $(TargetDir)Themes\
