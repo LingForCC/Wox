@@ -239,53 +239,6 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="{DynamicResource proxy}">
-            <StackPanel>
-                <CheckBox x:Name="cbEnableProxy" Margin="10">
-                    <TextBlock Text="{DynamicResource enableProxy}"></TextBlock>
-                </CheckBox>
-                <Grid Margin="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition ></RowDefinition>
-                        <RowDefinition ></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
-                        <ColumnDefinition Width="220"></ColumnDefinition>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Border Grid.Row="0" Grid.Column="0" Padding="5">
-                        <TextBlock Text="{DynamicResource server}"></TextBlock>
-                    </Border>
-                    <Border Grid.Row="0" Grid.Column="1" Padding="5">
-                        <TextBox  Width="200" HorizontalAlignment="Left" x:Name="tbProxyServer"></TextBox>
-                    </Border>
-                    <Border Grid.Row="0" Grid.Column="2" Padding="5">
-                        <TextBlock Text="{DynamicResource port}"></TextBlock>
-                    </Border>
-                    <Border Grid.Row="0" Grid.Column="3" Padding="5">
-                        <TextBox Width="50" HorizontalAlignment="Left" x:Name="tbProxyPort"></TextBox>
-                    </Border>
-                    <Border Grid.Row="1" Grid.Column="0" Padding="5">
-                        <TextBlock Text="{DynamicResource userName}"></TextBlock>
-                    </Border>
-                    <Border Grid.Row="1" Grid.Column="1" Padding="5">
-                        <TextBox Width="200" HorizontalAlignment="Left" x:Name="tbProxyUserName"></TextBox>
-                    </Border>
-                    <Border Grid.Row="1" Grid.Column="2" Padding="5">
-                        <TextBlock Text="{DynamicResource password}"></TextBlock>
-                    </Border>
-                    <Border Grid.Row="1" Grid.Column="3" Padding="5">
-                        <PasswordBox Width="200" HorizontalAlignment="Left" x:Name="tbProxyPassword" />
-                    </Border>
-                </Grid>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btnTestProxy" Width="80" HorizontalAlignment="Left" Margin="10" Click="btnTestProxy_Click" Content="{DynamicResource testProxy}"></Button>
-                    <Button x:Name="btnSaveProxy" Width="80" HorizontalAlignment="Left" Margin="10" Click="btnSaveProxy_Click" Content="{DynamicResource save}"></Button>
-                </StackPanel>
-            </StackPanel>
-        </TabItem>
         -->
     </TabControl>
 </Window>

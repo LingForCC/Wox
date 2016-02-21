@@ -43,29 +43,6 @@ namespace Wox
 
         //private void Setting_Loaded(object sender, RoutedEventArgs ev)
         //{
-        //    #region Proxy
-
-        //    cbEnableProxy.Checked += (o, e) => EnableProxy();
-        //    cbEnableProxy.Unchecked += (o, e) => DisableProxy();
-        //    cbEnableProxy.IsChecked = UserSettingStorage.Instance.ProxyEnabled;
-        //    tbProxyServer.Text = UserSettingStorage.Instance.ProxyServer;
-        //    if (UserSettingStorage.Instance.ProxyPort != 0)
-        //    {
-        //        tbProxyPort.Text = UserSettingStorage.Instance.ProxyPort.ToString();
-        //    }
-        //    tbProxyUserName.Text = UserSettingStorage.Instance.ProxyUserName;
-        //    tbProxyPassword.Password = UserSettingStorage.Instance.ProxyPassword;
-        //    if (UserSettingStorage.Instance.ProxyEnabled)
-        //    {
-        //        EnableProxy();
-        //    }
-        //    else
-        //    {
-        //        DisableProxy();
-        //    }
-
-        //    #endregion
-
         //    settingsLoaded = true;
         //}
 
@@ -549,109 +526,6 @@ namespace Wox
         //    lbPlugins.ItemsSource = plugins;
         //    lbPlugins.SelectedIndex = 0;
         //}
-
-        //#endregion
-
-        //#region Proxy
-        //private void btnSaveProxy_Click(object sender, RoutedEventArgs e)
-        //{
-        //    UserSettingStorage.Instance.ProxyEnabled = cbEnableProxy.IsChecked ?? false;
-
-        //    int port = 80;
-        //    if (UserSettingStorage.Instance.ProxyEnabled)
-        //    {
-        //        if (string.IsNullOrEmpty(tbProxyServer.Text))
-        //        {
-        //            MessageBox.Show(InternationalizationManager.Instance.GetTranslation("serverCantBeEmpty"));
-        //            return;
-        //        }
-        //        if (string.IsNullOrEmpty(tbProxyPort.Text))
-        //        {
-        //            MessageBox.Show(InternationalizationManager.Instance.GetTranslation("portCantBeEmpty"));
-        //            return;
-        //        }
-        //        if (!int.TryParse(tbProxyPort.Text, out port))
-        //        {
-        //            MessageBox.Show(InternationalizationManager.Instance.GetTranslation("invalidPortFormat"));
-        //            return;
-        //        }
-        //    }
-
-        //    UserSettingStorage.Instance.ProxyServer = tbProxyServer.Text;
-        //    UserSettingStorage.Instance.ProxyPort = port;
-        //    UserSettingStorage.Instance.ProxyUserName = tbProxyUserName.Text;
-        //    UserSettingStorage.Instance.ProxyPassword = tbProxyPassword.Password;
-        //    UserSettingStorage.Instance.Save();
-
-        //    MessageBox.Show(InternationalizationManager.Instance.GetTranslation("saveProxySuccessfully"));
-        //}
-
-        //private void btnTestProxy_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (string.IsNullOrEmpty(tbProxyServer.Text))
-        //    {
-        //        MessageBox.Show(InternationalizationManager.Instance.GetTranslation("serverCantBeEmpty"));
-        //        return;
-        //    }
-        //    if (string.IsNullOrEmpty(tbProxyPort.Text))
-        //    {
-        //        MessageBox.Show(InternationalizationManager.Instance.GetTranslation("portCantBeEmpty"));
-        //        return;
-        //    }
-        //    int port;
-        //    if (!int.TryParse(tbProxyPort.Text, out port))
-        //    {
-        //        MessageBox.Show(InternationalizationManager.Instance.GetTranslation("invalidPortFormat"));
-        //        return;
-        //    }
-
-        //    HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://www.baidu.com");
-        //    request.Timeout = 1000 * 5;
-        //    request.ReadWriteTimeout = 1000 * 5;
-        //    if (string.IsNullOrEmpty(tbProxyUserName.Text))
-        //    {
-        //        request.Proxy = new WebProxy(tbProxyServer.Text, port);
-        //    }
-        //    else
-        //    {
-        //        request.Proxy = new WebProxy(tbProxyServer.Text, port);
-        //        request.Proxy.Credentials = new NetworkCredential(tbProxyUserName.Text, tbProxyPassword.Password);
-        //    }
-        //    try
-        //    {
-        //        HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-        //        if (response.StatusCode == HttpStatusCode.OK)
-        //        {
-        //            MessageBox.Show(InternationalizationManager.Instance.GetTranslation("proxyIsCorrect"));
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show(InternationalizationManager.Instance.GetTranslation("proxyConnectFailed"));
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        MessageBox.Show(InternationalizationManager.Instance.GetTranslation("proxyConnectFailed"));
-        //    }
-        //}
-
-        //private void EnableProxy()
-        //{
-        //    tbProxyPassword.IsEnabled = true;
-        //    tbProxyServer.IsEnabled = true;
-        //    tbProxyUserName.IsEnabled = true;
-        //    tbProxyPort.IsEnabled = true;
-        //}
-
-        //private void DisableProxy()
-        //{
-        //    tbProxyPassword.IsEnabled = false;
-        //    tbProxyServer.IsEnabled = false;
-        //    tbProxyUserName.IsEnabled = false;
-        //    tbProxyPort.IsEnabled = false;
-        //}
-
-        //#endregion
 
         //#endregion
 
