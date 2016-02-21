@@ -43,77 +43,6 @@ namespace Wox
 
         //private void Setting_Loaded(object sender, RoutedEventArgs ev)
         //{
-        //    #region General
-        //    cbHideWhenDeactive.Checked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.HideWhenDeactive = true;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbHideWhenDeactive.Unchecked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.HideWhenDeactive = false;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbRememberLastLocation.Checked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.RememberLastLaunchLocation = true;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbRememberLastLocation.Unchecked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.RememberLastLaunchLocation = false;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbDontPromptUpdateMsg.Checked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.DontPromptUpdateMsg = true;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbDontPromptUpdateMsg.Unchecked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.DontPromptUpdateMsg = false;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-        //    cbIgnoreHotkeysOnFullscreen.Checked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.IgnoreHotkeysOnFullscreen = true;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-
-        //    cbIgnoreHotkeysOnFullscreen.Unchecked += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.IgnoreHotkeysOnFullscreen = false;
-        //        UserSettingStorage.Instance.Save();
-        //    };
-
-
-        //    cbStartWithWindows.IsChecked = CheckApplicationIsStartupWithWindow();
-        //    comboMaxResultsToShow.SelectionChanged += (o, e) =>
-        //    {
-        //        UserSettingStorage.Instance.MaxResultsToShow = (int)comboMaxResultsToShow.SelectedItem;
-        //        UserSettingStorage.Instance.Save();
-        //        //MainWindow.pnlResult.lbResults.GetBindingExpression(MaxHeightProperty).UpdateTarget();
-        //    };
-
-        //    cbHideWhenDeactive.IsChecked = UserSettingStorage.Instance.HideWhenDeactive;
-        //    cbDontPromptUpdateMsg.IsChecked = UserSettingStorage.Instance.DontPromptUpdateMsg;
-        //    cbRememberLastLocation.IsChecked = UserSettingStorage.Instance.RememberLastLaunchLocation;
-        //    cbIgnoreHotkeysOnFullscreen.IsChecked = UserSettingStorage.Instance.IgnoreHotkeysOnFullscreen;
-
-        //    LoadLanguages();
-        //    comboMaxResultsToShow.ItemsSource = Enumerable.Range(2, 16);
-        //    var maxResults = UserSettingStorage.Instance.MaxResultsToShow;
-        //    comboMaxResultsToShow.SelectedItem = maxResults == 0 ? 6 : maxResults;
-
-        //    #endregion
-
         //    #region Proxy
 
         //    cbEnableProxy.Checked += (o, e) => EnableProxy();
@@ -149,31 +78,6 @@ namespace Wox
         //    settingsLoaded = true;
         //}
 
-        //public void SwitchTo(string tabName)
-        //{
-        //    switch (tabName)
-        //    {
-        //        case "general":
-        //            settingTab.SelectedIndex = 0;
-        //            break;
-        //        case "plugin":
-        //            settingTab.SelectedIndex = 1;
-        //            break;
-        //        case "theme":
-        //            settingTab.SelectedIndex = 2;
-        //            break;
-        //        case "hotkey":
-        //            settingTab.SelectedIndex = 3;
-        //            break;
-        //        case "proxy":
-        //            settingTab.SelectedIndex = 4;
-        //            break;
-        //        case "about":
-        //            settingTab.SelectedIndex = 5;
-        //            break;
-        //    }
-        //}
-
         //private void settingTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
         //    // Update controls inside the selected tab
@@ -192,62 +96,6 @@ namespace Wox
         //        OnHotkeyTabSelected();
         //    }
         //}
-
-        //#region General
-
-        //private void LoadLanguages()
-        //{
-        //    cbLanguages.ItemsSource = InternationalizationManager.Instance.LoadAvailableLanguages();
-        //    cbLanguages.DisplayMemberPath = "Display";
-        //    cbLanguages.SelectedValuePath = "LanguageCode";
-        //    cbLanguages.SelectedValue = UserSettingStorage.Instance.Language;
-        //    cbLanguages.SelectionChanged += cbLanguages_SelectionChanged;
-        //}
-
-        //void cbLanguages_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    InternationalizationManager.Instance.ChangeLanguage(cbLanguages.SelectedItem as Language);
-        //}
-
-        //private void CbStartWithWindows_OnChecked(object sender, RoutedEventArgs e)
-        //{
-        //    AddApplicationToStartup();
-        //    UserSettingStorage.Instance.StartWoxOnSystemStartup = true;
-        //    UserSettingStorage.Instance.Save();
-        //}
-
-        //private void CbStartWithWindows_OnUnchecked(object sender, RoutedEventArgs e)
-        //{
-        //    RemoveApplicationFromStartup();
-        //    UserSettingStorage.Instance.StartWoxOnSystemStartup = false;
-        //    UserSettingStorage.Instance.Save();
-        //}
-
-        //private void AddApplicationToStartup()
-        //{
-        //    using (RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
-        //    {
-        //        key.SetValue("Wox", "\"" + Application.ExecutablePath + "\" --hidestart");
-        //    }
-        //}
-
-        //private void RemoveApplicationFromStartup()
-        //{
-        //    using (RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
-        //    {
-        //        key.DeleteValue("Wox", false);
-        //    }
-        //}
-
-        //private bool CheckApplicationIsStartupWithWindow()
-        //{
-        //    using (RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
-        //    {
-        //        return key.GetValue("Wox") != null;
-        //    }
-        //}
-
-        //#endregion
 
         //#region Hotkey
 

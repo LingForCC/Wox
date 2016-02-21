@@ -35,33 +35,7 @@
             </Style>
         </TabControl.ItemContainerStyle>
 
-        <!--<TabItem Header="{DynamicResource general}">
-            <StackPanel Orientation="Vertical" Margin="10">
-                <CheckBox x:Name="cbStartWithWindows"  Unchecked="CbStartWithWindows_OnUnchecked" Checked="CbStartWithWindows_OnChecked" Margin="10">
-                    <TextBlock Text="{DynamicResource startWoxOnSystemStartup}" ></TextBlock>
-                </CheckBox>
-                <CheckBox x:Name="cbHideWhenDeactive" Margin="10">
-                    <TextBlock Text="{DynamicResource hideWoxWhenLoseFocus}" ></TextBlock>
-                </CheckBox>
-                <CheckBox x:Name="cbDontPromptUpdateMsg" Margin="10">
-                    <TextBlock Text="{DynamicResource dontPromptUpdateMsg}" ></TextBlock>
-                </CheckBox>
-                <CheckBox x:Name="cbRememberLastLocation" Margin="10">
-                    <TextBlock Text="{DynamicResource rememberLastLocation}" ></TextBlock>
-                </CheckBox>
-                <CheckBox x:Name="cbIgnoreHotkeysOnFullscreen" Margin="10">
-                    <TextBlock Text="{DynamicResource ignoreHotkeysOnFullscreen}" ></TextBlock>
-                </CheckBox>
-                <StackPanel Margin="10" Orientation="Horizontal">
-                    <TextBlock  Text="{DynamicResource language}"></TextBlock>
-                    <ComboBox Margin="10 0 0 0" Width="120" x:Name="cbLanguages" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock  Text="{DynamicResource maxShowResults}"></TextBlock>
-                    <ComboBox Margin="10 0 0 0" Width="45" Name="comboMaxResultsToShow"/>
-                </StackPanel>
-            </StackPanel>
-        </TabItem>
+       <!--
         <TabItem Header="{DynamicResource plugin}" x:Name="tabPlugin">
             <Grid>
                 <Grid.ColumnDefinitions>
