@@ -19,6 +19,7 @@ namespace Wox.ViewModel
         {
             _tabs = new List<BaseSettingTabItemViewModel>();
             _tabs.Add(new GeneralTabItemViewModel());
+            _tabs.Add(new AboutTabItemViewModel());
 
             this.SelectedTabItemViewModel = _tabs[0];
         }

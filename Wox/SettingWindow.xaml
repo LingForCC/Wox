@@ -26,6 +26,9 @@
         <DataTemplate DataType="{x:Type vm:GeneralSettingViewModel}">
             <view:GeneralSettingView></view:GeneralSettingView>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AboutSettingViewModel}">
+            <view:AboutSettingView></view:AboutSettingView>
+        </DataTemplate>
     </Window.Resources>
     <TabControl Height="auto" ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTabItemViewModel}">
         <TabControl.ItemContainerStyle>
