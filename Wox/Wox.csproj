@@ -136,6 +136,7 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\GeneralTabItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ProxyTabItemViewModel.cs" />
     <Compile Include="ViewModel\ResultItemViewModel.cs" />
     <Compile Include="ViewModel\ResultPanelViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
@@ -144,6 +145,9 @@
     </Compile>
     <Compile Include="View\GeneralSettingView.xaml.cs">
       <DependentUpon>GeneralSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProxySettingView.xaml.cs">
+      <DependentUpon>ProxySettingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="WoxUpdate.xaml.cs">
       <DependentUpon>WoxUpdate.xaml</DependentUpon>
@@ -307,6 +311,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GeneralSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProxySettingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
