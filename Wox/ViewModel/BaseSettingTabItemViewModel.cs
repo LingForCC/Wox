@@ -22,6 +22,11 @@ namespace Wox.ViewModel
             get { return GetContent(); }
         }
 
+        public string Name
+        {
+            get { return GetHeaderResourceKey(); }
+        }
+
         #endregion
 
         #region Abstract Methods

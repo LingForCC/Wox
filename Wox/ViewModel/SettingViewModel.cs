@@ -47,7 +47,7 @@ namespace Wox.ViewModel
 
         public void SwitchTo(string tabName)
         {
-            var toSelectTab = _tabs.Find(vm => vm.Header == tabName);
+            var toSelectTab = _tabs.Find(vm => vm.Name == tabName);
             if (toSelectTab != null)
             {
                 SelectedTabItemViewModel = toSelectTab;
