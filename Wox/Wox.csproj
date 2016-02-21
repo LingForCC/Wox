@@ -131,6 +131,7 @@
     <Compile Include="Storage\QueryHistoryStorage.cs" />
     <Compile Include="Storage\TopMostRecordStorage.cs" />
     <Compile Include="Storage\UserSelectedRecordStorage.cs" />
+    <Compile Include="ViewModel\AboutTabItemViewModel.cs" />
     <Compile Include="ViewModel\BaseSettingTabItemViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\GeneralTabItemViewModel.cs" />
@@ -138,6 +139,9 @@
     <Compile Include="ViewModel\ResultItemViewModel.cs" />
     <Compile Include="ViewModel\ResultPanelViewModel.cs" />
     <Compile Include="ViewModel\SettingViewModel.cs" />
+    <Compile Include="View\AboutSettingView.xaml.cs">
+      <DependentUpon>AboutSettingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GeneralSettingView.xaml.cs">
       <DependentUpon>GeneralSettingView.xaml</DependentUpon>
     </Compile>
@@ -297,6 +301,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\AboutSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GeneralSettingView.xaml">
       <SubType>Designer</SubType>
