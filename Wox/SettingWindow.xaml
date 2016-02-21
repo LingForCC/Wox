@@ -283,28 +283,6 @@
                 </StackPanel>
             </StackPanel>
         </TabItem>
-        <TabItem Header="{DynamicResource about}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <TextBlock Grid.Column="0" Grid.Row="0" Margin="6" Text="{DynamicResource website}"></TextBlock>
-                <TextBlock Grid.Column="1" Grid.Row="0" Margin="6" HorizontalAlignment="Left" Cursor="Hand" MouseUp="tbWebsite_MouseUp" x:Name="tbWebsite" Foreground="Blue" Text="http://www.getwox.com"></TextBlock>
-
-                <TextBlock Grid.Column="0" Grid.Row="1" Margin="6" Text="{DynamicResource version}"></TextBlock>
-                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-                    <TextBlock  Margin="6" HorizontalAlignment="Left" x:Name="tbVersion" Text="1.0.0"></TextBlock>
-                </StackPanel>
-
-                <TextBlock x:Name="tbActivatedTimes" Grid.Row="2" Margin="6" Grid.ColumnSpan="2" Text="{DynamicResource about_activate_times}"></TextBlock>
-            </Grid>
-        </TabItem>-->
+        -->
     </TabControl>
 </Window>

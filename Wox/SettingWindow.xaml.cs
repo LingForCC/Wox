@@ -66,15 +66,6 @@ namespace Wox
 
         //    #endregion
 
-        //    #region About
-
-        //    tbVersion.Text = UpdaterManager.Instance.CurrentVersion.ToString();
-        //    string activateTimes = string.Format(InternationalizationManager.Instance.GetTranslation("about_activate_times"),
-        //        UserSettingStorage.Instance.ActivateTimes);
-        //    tbActivatedTimes.Text = activateTimes;
-
-        //    #endregion
-
         //    settingsLoaded = true;
         //}
 
@@ -661,13 +652,6 @@ namespace Wox
         //}
 
         //#endregion
-
-        //#region About
-
-        //private void tbWebsite_MouseUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    Process.Start("http://www.getwox.com");
-        //}
 
         //#endregion
 
