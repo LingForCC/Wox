@@ -26,6 +26,9 @@
         <DataTemplate DataType="{x:Type vm:GeneralSettingViewModel}">
             <view:GeneralSettingView></view:GeneralSettingView>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:HotkeySettingViewModel}">
+            <view:HotkeySettingView></view:HotkeySettingView>
+        </DataTemplate>
         <DataTemplate DataType="{x:Type vm:ProxySettingViewModel}">
             <view:ProxySettingView></view:ProxySettingView>
         </DataTemplate>

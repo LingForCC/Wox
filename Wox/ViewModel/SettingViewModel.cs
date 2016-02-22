@@ -19,6 +19,7 @@ namespace Wox.ViewModel
         {
             _tabs = new List<BaseSettingTabItemViewModel>();
             _tabs.Add(new GeneralTabItemViewModel());
+            _tabs.Add(new HotkeyTabItemViewModel());
             _tabs.Add(new ProxyTabItemViewModel());
             _tabs.Add(new AboutTabItemViewModel());
 
