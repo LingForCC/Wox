@@ -7,18 +7,19 @@ using System.Windows;
 using Wox.Core.Resource;
 using Wox.Core.UserSettings;
 using Wox.Infrastructure.Hotkey;
+using Wox.ViewModel;
 
 namespace Wox
 {
     public partial class CustomQueryHotkeySetting : Window
     {
-        private SettingWindow settingWidow;
+        private HotkeySettingViewModel _hotkeySettingViewModel;
         private bool update;
         private CustomPluginHotkey updateCustomHotkey;
 
-        public CustomQueryHotkeySetting(SettingWindow settingWidow)
+        public CustomQueryHotkeySetting(HotkeySettingViewModel hotkeySettingViewModel)
         {
-            this.settingWidow = settingWidow;
+            this._hotkeySettingViewModel = hotkeySettingViewModel;
             InitializeComponent();
         }
 
@@ -55,6 +56,7 @@ namespace Wox
                     App.API.ShowApp();
                 });
                 MessageBox.Show(InternationalizationManager.Instance.GetTranslation("succeed"));
+                _hotkeySettingViewModel.AddCustomPluginHotkey(pluginHotkey);
             }
             else
             {
@@ -74,10 +76,11 @@ namespace Wox
                     App.API.ChangeQuery(updateCustomHotkey.ActionKeyword);
                 });
                 MessageBox.Show(InternationalizationManager.Instance.GetTranslation("succeed"));
-            }
+                _hotkeySettingViewModel.UpdateCustomPluginHotkey(oldHotkey, updateCustomHotkey);
 
+            }
             UserSettingStorage.Instance.Save();
-            //settingWidow.ReloadCustomPluginHotkeyView();
+            
             Close();
         }
 
