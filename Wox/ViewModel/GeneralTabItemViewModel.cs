@@ -220,7 +220,7 @@ namespace Wox.ViewModel
             }
 
             _selectedLanguageOption = _languageOptions.Find(
-                lo => { return lo.Language.Display == UserSettingStorage.Instance.Language; });
+                lo => { return lo.Language.LanguageCode == UserSettingStorage.Instance.Language; });
         }
 
         public IEnumerable<LanguageOption> LanguageOptions

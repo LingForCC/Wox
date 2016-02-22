@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:Wox.ViewModel"
              xmlns:local="clr-namespace:Wox.View"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:LanguageOption}">
+            <TextBlock Text="{Binding Display}"></TextBlock>
+        </DataTemplate>
+    </UserControl.Resources>
     <StackPanel Orientation="Vertical" Margin="10">
         <CheckBox  Margin="10" IsChecked="{Binding StartWoxOnSystemStartup}">
             <TextBlock Text="{DynamicResource startWoxOnSystemStartup}" ></TextBlock>
