@@ -135,6 +135,7 @@
     <Compile Include="ViewModel\BaseSettingTabItemViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\GeneralTabItemViewModel.cs" />
+    <Compile Include="ViewModel\HotkeyTabItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ProxyTabItemViewModel.cs" />
     <Compile Include="ViewModel\ResultItemViewModel.cs" />
@@ -145,6 +146,9 @@
     </Compile>
     <Compile Include="View\GeneralSettingView.xaml.cs">
       <DependentUpon>GeneralSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HotkeySettingView.xaml.cs">
+      <DependentUpon>HotkeySettingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ProxySettingView.xaml.cs">
       <DependentUpon>ProxySettingView.xaml</DependentUpon>
@@ -311,6 +315,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\GeneralSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HotkeySettingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

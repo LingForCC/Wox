@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Wox.View.HotkeySettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:Wox.ViewModel"
+             xmlns:local="clr-namespace:Wox.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{d:DesignInstance vm:HotkeySettingViewModel}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center" Margin="0 0 10 0" Text="{DynamicResource woxHotkey}"></TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox TabIndex="100" VerticalContentAlignment="Center" Grid.Column="0" Text="{Binding CurrentHotkey}" PreviewKeyDown="TbHotkey_OnPreviewKeyDown"></TextBox>
+                <TextBlock Visibility="{Binding MessageVisibility}" Margin="5 0 0 0" VerticalAlignment="Center" Grid.Column="1" Text="{Binding Message}" 
+                        Foreground="{Binding MessageForegroundColor}"></TextBlock>
+            </Grid>
+        </StackPanel>
+        <Grid  Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock VerticalAlignment="Center" Grid.Row="0" Margin="0 0 10 0" Text="{DynamicResource customQueryHotkey}"></TextBlock>
+            <ListView Margin="0 5 0 0" Grid.Row="1" ItemsSource="{Binding CustomPluginHotkeys}" SelectedItem="{Binding SelectedCustomPluginHotkey}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="{DynamicResource hotkey}"  Width="180">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Hotkey}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="{DynamicResource actionKeywords}" Width="500">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ActionKeywords}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Command="{Binding DeleteCommand}" Width="100" Margin="10" Content="{DynamicResource delete}"/>
+            <Button Command="{Binding EditCommand}"  Width="100" Margin="10" Content="{DynamicResource edit}"/>
+            <Button Command="{Binding AddCommand}"  Width="100" Margin="10" Content="{DynamicResource add}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
